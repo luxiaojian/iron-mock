@@ -1,0 +1,91 @@
+aside {
+  width: 360px;
+  height: 100%;
+  overflow: auto;
+  float: left;
+  background-color: #eee;
+}
+
+aside ul.nav li {
+  width: 33.3%;
+  text-align: center;
+}
+
+aside ul.nav li a {
+  border-radius: 0;
+}
+
+aside ul.list-group {
+  list-style: none;
+  padding-left: 0;
+}
+
+aside ul.list-group li.list-group-item span {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 28px;
+}
+
+aside footer{
+  position: absolute;
+  bottom: 0;
+  padding: 10px 0;
+  background-color: #f8f8f8;
+  border-top: 1px solid #ddd;
+}
+
+footer a.text-center{
+  display: block;
+  width: 360px;
+}
+
+ul.link-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul.link-list li {
+  font-size: 15px;
+  line-height: 25px;
+}
+
+ul.link-list li span.text-link {
+  width: 300px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  text-decoration: underline;
+}.container-box {
+  position: absolute;
+  bottom: 0;
+  top: 50px;
+  width: 100%;
+}
+
+.navbar-header a.navbar-brand {
+  font-size: 25px;
+  font-weight: 600;
+  color: #000;
+}
+
+.navbar-header a.navbar-brand small {
+  font-size: 12px;
+  margin-left: 6px;
+}
+main {
+  overflow: auto;
+  height: 100%;
+  padding: 36px;
+}
+
+i.glyphicon {
+  margin-right: 8px;
+}
+
+a:focus {
+  outline: none!important;
+}button.btn-info {
+  margin-left: 6px;
+  margin-top: 8px;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJtYWluLmNzcyIsInNvdXJjZVJvb3QiOiIifQ==*/

@@ -1,0 +1,30 @@
+.container-box {
+  position: absolute;
+  bottom: 0;
+  top: 50px;
+  width: 100%;
+}
+
+.navbar-header a.navbar-brand {
+  font-size: 25px;
+  font-weight: 600;
+  color: #000;
+
+  small {
+    font-size: 12px;
+    margin-left: 6px;
+  }
+}
+main {
+  overflow: auto;
+  height: 100%;
+  padding: 36px;
+}
+
+i.glyphicon {
+  margin-right: 8px;
+}
+
+a:focus {
+  outline: none!important;
+}

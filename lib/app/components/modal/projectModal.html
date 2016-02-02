@@ -1,0 +1,23 @@
+<div class="modal in" role="dialog" style="display: block; padding-right: 15px; background-color: rgba(0, 0, 0, .5)">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title">添加新项目</h4>
+      </div>
+      <div class="modal-body">
+        <form class="form-horizontal" novalidate>
+          <div class="form-group">
+            <label for="name" class="col-sm-2 control-label">项目名:</label>
+            <div class="col-sm-10">
+              <input id="name" type="text" ng-model="project.name" class="form-control">
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" ng-click="project.hide()" class="btn btn-default">取消</button>
+        <button type="submit" class="btn btn-primary" ng-click="project.submit()">创建项目</button>
+      </div>
+    </div>
+  </div>
+</div>

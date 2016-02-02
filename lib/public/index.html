@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="eleme">
+  <head>
+    <title>Iron-mock-可视化的api mock工具</title>
+    <link href="./vendor.css" rel="stylesheet" />
+    <link href="./main.css" rel="stylesheet" />
+    <script src="./vendor.js"></script>
+    <script src="./main.js"></script>
+  </head>
+  <body>
+    <nav role="navigation" class="navbar navbar-default navbar-static-top">
+      <div class="container-fluid clearfix">
+        <div class="navbar-header">
+          <a href="/" class="navbar-brand">Iron-mock<small>-可视化的api mock工具</small></a>
+        </div>
+        <a href = "Javascript:;" class = "pull-right btn btn-success" ng-click="$root.open()" style="margin-top: 8px; margin-right: 4px;">启动Mock服务器</a>
+      </div>
+    </nav>
+    <div class="clearfix container-box">
+      <eleme-aside></eleme-aside>
+      <main ng-view></main>
+    </div>
+  </body>
+</html>
