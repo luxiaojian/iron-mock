@@ -52,7 +52,33 @@ ul.link-list {
       text-overflow: ellipsis;
       overflow: hidden;
       white-space: nowrap;
-      text-decoration: underline;
+      text-decoration: none;
     }
   }
+}
+
+aside .tab-content {
+  height: 100%;
+
+  .tab-pane {
+    height: 100%;
+  }
+}
+
+.url-content {
+  border-right: 1px solid #D4D4D4;
+
+  li.url-item {
+    padding: 6px 12px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+  }
+
+  li.url-item:first-child {
+    border-top: 1px solid #ddd;
+  }
+}
+
+aside ul.list-group {
+  padding-bottom: 36px;
 }

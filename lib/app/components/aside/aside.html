@@ -10,16 +10,19 @@
       <ul class="list-group">
         <li class="list-group-item clearfix" ng-repeat="api in apis">
           <span ng-bind="api.name" class="pull-left" ng-click="goApi(api)"></span>
-          <a href = "Javascript:;" class = "btn btn-danger pull-right btn-sm" ng-click="delete(api, $index)">删除</a>
+          <a href = "Javascript:;" class = "btn btn-danger pull-right btn-sm" ng-click="deleteApi(api, $index)">删除</a>
         </li>
       </ul>
 
       <footer><a href="Javascript:;" class="text-center" ng-click="addApi()"><i class="glyphicon glyphicon-plus"></i></a></footer>
     </div>
 
-    <div class="tab-pane" ng-class="{'active': $root.type === 'url'}">
-      <ul class="list-group">
-        <li class="list-group-item text-primary" ng-repeat="data in urls" ng-bind="data.url" ng-click="goUrl(data)"></li>
+    <div class="tab-pane url-content" ng-class="{'active': $root.type === 'url'}">
+      <ul class="link-list">
+        <li class="clearfix url-item" ng-repeat="data in urls">
+          <span class="text-primary text-link pull-left" ng-bind="data.url" ng-click="goUrl(data)"></span>
+          <a href = "Javascript:;" class = "glyphicon glyphicon-trash pull-right text-danger" ng-click="deleteUrl(data.url, $index)" style="margin-top: 8px;"></a>
+        </li>
       </ul>
     </div>
 
