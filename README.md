@@ -12,5 +12,5 @@ $ sudo npm install iron-mock
 ## 使用方法
 
 ```
-$ sudo iron-mock server
+$ iron-mock server
 ```
