@@ -1,6 +1,6 @@
 {
   "name": "iron-mock",
-  "version": "1.2.0",
+  "version": "1.2.2",
   "description": "mock server",
   "main": "app.js",
   "keywords": [
