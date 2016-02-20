@@ -7,7 +7,7 @@ aside {
 }
 
 aside ul.nav li {
-  width: 33.3%;
+  width: 50%;
   text-align: center;
 }
 
@@ -81,7 +81,12 @@ aside .tab-content .tab-pane {
 
 aside ul.list-group {
   padding-bottom: 36px;
-}.container-box {
+}
+
+.form-search {
+  border-radius: 0;
+}
+.container-box {
   position: absolute;
   bottom: 0;
   top: 50px;

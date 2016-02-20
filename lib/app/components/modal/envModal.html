@@ -2,27 +2,27 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header text-center">
-        <h4 class="modal-title">添加新项目</h4>
+        <h4 class="modal-title"  ng-bind="'给项目' + modal.env.project + '添加新的环境'"></h4>
       </div>
       <div class="modal-body">
         <form class="form-horizontal" novalidate>
           <div class="form-group">
-            <label for="name" class="col-sm-2 control-label">name</label>
+            <label for="name" class="col-sm-2 control-label">Name</label>
             <div class="col-sm-10">
-              <input id="name" type="text" ng-model="modal.project.name" class="form-control">
+              <input id="name" type="text" ng-model="modal.env.name" class="form-control">
             </div>
           </div>
           <div class="form-group">
-            <label for="hostname" class="col-sm-2 control-label">hostname</label>
+            <label for="host" class="col-sm-2 control-label">Host</label>
             <div class="col-sm-10">
-              <input id="hostname" type="text" ng-model="modal.project.hostname" class="form-control">
+              <input id="host" type="text" ng-model="modal.env.host" class="form-control" placeholder="127.0.0.1:633211">
             </div>
           </div>
         </form>
       </div>
       <div class="modal-footer">
+        <button type="submit" class="btn btn-primary" ng-click="modal.submit()">创建新环境</button>
         <button type="button" ng-click="modal.hide()" class="btn btn-default">取消</button>
-        <button type="submit" class="btn btn-primary" ng-click="modal.submit()">创建项目</button>
       </div>
     </div>
   </div>

@@ -17,14 +17,10 @@ program
     var params = {
       port: port
     };
-    var options = [];
-    for(var key in params) {
-      options.push(`--${key} ${params[key]}`)
-    }
+
     var appFile = pathUtil.resolve(__dirname, '../lib/app.js');
 
-    open.exec(`node ${appFile} --harmony`);
-
+    open.exec(`node ${appFile} --port ${params.port} --harmony`);
   })
   .on('--help', function() {
     log(' Examples:');

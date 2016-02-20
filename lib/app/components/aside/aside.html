@@ -1,29 +1,20 @@
 <aside>
   <ul class="nav nav-tabs" ng-init="queryApi()">
-    <li ng-class="{'active': $root.type === 'api'}"><a href="Javascript:;" ng-click="queryApi()">api列表</a></li>
-    <li ng-class="{'active': $root.type === 'url'}"><a href="Javascript:;" ng-click="queryUrl()">接口列表</a></li>
+    <li ng-class="{'active': $root.type === 'api'}"><a href="Javascript:;" ng-click="queryApi()">请求列表</a></li>
     <li ng-class="{'active': $root.type === 'project'}"><a href="Javascript:;" ng-click="queryProject()">项目列表</a></li>
   </ul>
 
   <div class="tab-content">
     <div class="tab-pane" ng-class="{'active': $root.type === 'api'}">
+      <input type = "text" placeholder="搜索api" class="form-control form-search" ng-model="apiSearch">
       <ul class="list-group">
-        <li class="list-group-item clearfix" ng-repeat="api in apis">
+        <li class="list-group-item clearfix" ng-repeat="api in apis | filter: apiSearch">
           <span ng-bind="api.name" class="pull-left" ng-click="goApi(api)"></span>
           <a href = "Javascript:;" class = "btn btn-danger pull-right btn-sm" ng-click="deleteApi(api, $index)">删除</a>
         </li>
       </ul>
 
       <footer><a href="Javascript:;" class="text-center" ng-click="addApi()"><i class="glyphicon glyphicon-plus"></i></a></footer>
-    </div>
-
-    <div class="tab-pane url-content" ng-class="{'active': $root.type === 'url'}">
-      <ul class="link-list">
-        <li class="clearfix url-item" ng-repeat="data in urls">
-          <span class="text-primary text-link pull-left" ng-bind="data.url" ng-click="goUrl(data)"></span>
-          <a href = "Javascript:;" class = "glyphicon glyphicon-trash pull-right text-danger" ng-click="deleteUrl(data.url, $index)" style="margin-top: 8px;"></a>
-        </li>
-      </ul>
     </div>
 
     <div class="tab-pane" ng-class="{'active': $root.type === 'project'}">
@@ -34,12 +25,12 @@
             <span ng-bind="project.name"></span>
             <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': open, 'glyphicon-chevron-right': !open}"></i>
           </uib-accordion-heading>
-          <div ng-if="project.data.length <= 0" class="text-center">
+          <div ng-if="project.data.apis.length <= 0" class="text-center">
             <p>该项目还没有添加路由赶紧去添加吧!</p>
             <a ng-click="queryUrl()" class = "btn btn-danger">去添加接口</a>
           </div>
-          <ul class="link-list" ng-if="project.data.length > 0">
-            <li ng-repeat="api in project.data track by $index" class="clearfix">
+          <ul class="link-list" ng-if="project.data && project.data.apis.length > 0">
+            <li ng-repeat="api in project.data.apis track by $index" class="clearfix">
               <span class="text-primary text-link pull-left" ng-bind="api.url" ng-click="goProjectApi(project.name, api)"></span>
               <a href = "Javascript:;" class = "glyphicon glyphicon-trash pull-right text-danger" ng-click="deleteProjectApi($parent.$index, $index)" style="margin-top: 8px;"></a>
             </li>
