@@ -27,7 +27,7 @@
     "express-remove-route": "^0.1.1",
     "express-session": "^1.11.3",
     "morgan": "~1.6.1",
-    "nodemon": "^1.8.1",
+    "nodemon": "1.15.2-alpha.1",
     "serve-favicon": "~2.3.0",
     "superagent": "^1.7.2",
     "vhost": "^3.0.2"
